@@ -5,14 +5,14 @@ import {HeaderLogo} from "./components/HeaderLogo";
 const config: DocsThemeConfig = {
   logo: <HeaderLogo />,
   project: {
-    link: 'https://github.com/shuding/nextra-docs-template',
+    link: 'https://github.com/Sinytra/Connector',
   },
   chat: {
-    link: 'https://discord.com',
+    link: 'https://discord.gg/mamk7z3TKZ',
   },
-  docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
+  docsRepositoryBase: 'https://github.com/Sinytra/website',
   footer: {
-    text: 'Nextra Docs Template',
+    text: 'Sinytra documentation',
   },
 }
 
