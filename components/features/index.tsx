@@ -1,51 +1,67 @@
 import cn from 'clsx'
 import {motion} from 'framer-motion'
 import Link from 'next/link'
-import type {ReactNode} from 'react'
+import type {Component, ReactNode} from 'react'
 import styles from './style.module.css'
 
-export function Feature({
-                          large,
-                          centered,
-                          children,
-                          lightOnly,
-                          className,
-                          href,
-                          index,
-                          ...props
-                        }) {
+export interface Props {
+  title: string
+  large?: boolean
+  centered?: boolean
+  lightOnly?: boolean
+  className: string
+  href: string
+  index: number
+  children: any
+  icon: any
+}
+
+export function Feature({title, children, icon: FeatureIcon, large, centered, lightOnly, className, href, index, ...props}: Props) {
   return (
-      <motion.div
-          initial={{opacity: 0}}
-          whileInView={{opacity: 1}}
-          viewport={{once: true, margin: '-20px'}}
-          transition={{duration: Math.min(0.25 + index * 0.2, 0.8)}}
-          className={cn(
-              styles.feature,
-              large && styles.large,
-              centered && styles.centered,
-              lightOnly && styles['light-only'],
-              className
-          )}
-          {...props}
-      >
-        {children}
-        {href ? (
-            <Link className={styles.link} href={href} target="_blank">
-              <svg width="1.5em"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-              >
-                <path
-                    fill-rule="evenodd"
-                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                    clip-rule="evenodd"
-                />
-              </svg>
-            </Link>
-        ) : null}
-      </motion.div>
+    <motion.div
+      initial={{opacity: 0}}
+      whileInView={{opacity: 1}}
+      viewport={{once: true, margin: '-20px'}}
+      transition={{duration: Math.min(0.25 + index * 0.2, 0.8)}}
+      className={"rounded-2xl px-4 py-5 border-x border-t " + cn(
+        styles.feature,
+        large && styles.large,
+        centered && styles.centered,
+        lightOnly && styles['light-only'],
+        className
+      )}
+      {...props}
+    >
+
+      <div className={"w-20 h-20 rounded-2xl absolute border-x border-t border-neutral-500 bg-black -top-14 left-1/2 -translate-x-1/2"}>
+        <div className="flex justify-center items-center w-full h-full text-neutral-300">
+          <FeatureIcon />
+        </div>
+      </div>
+
+      <div className="mt-5 flex flex-col gap-y-5">
+        <h2 className="text-3xl">{title}</h2>
+        <div className="py-3">
+          <span className="text-neutral-400">{children}</span>
+        </div>
+      </div>
+
+      {href ? (
+        <Link className={styles.link} href={href} target="_blank">
+          <svg width="1.5em"
+               xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 20 20"
+               fill="currentColor"
+          >
+            <path
+              fillRule="evenodd"
+              d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+              clipRule="evenodd"
+            />
+          </svg>
+        </Link>
+      ) : null}
+    </motion.div>
   )
 }
 
