@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.header img {
+    display: inline;
+    float: left;
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+}
+
+.header span {
+    vertical-align: middle;
+}
+
+.header {
+    display: inline-block;
+    width: 100%;
+    clear: both;
+}

@@ -1,9 +1,9 @@
 import React from 'react'
-import { DocsThemeConfig } from 'nextra-theme-docs'
+import {DocsThemeConfig} from 'nextra-theme-docs'
 import {HeaderLogo} from "./components/HeaderLogo";
 
 const config: DocsThemeConfig = {
-  logo: <HeaderLogo />,
+  logo: <HeaderLogo/>,
   project: {
     link: 'https://github.com/Sinytra/Connector',
   },
@@ -12,8 +12,14 @@ const config: DocsThemeConfig = {
   },
   docsRepositoryBase: 'https://github.com/Sinytra/website',
   footer: {
-    text: 'Sinytra documentation',
-  },
+    content: (
+        <div className="flex w-full flex-col items-center sm:items-start">
+          <p className="mt-6 text-xs">
+            © {new Date().getFullYear()} The Sinytra Project.
+          </p>
+        </div>
+    )
+  }
 }
 
 export default config
