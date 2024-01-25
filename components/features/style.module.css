@@ -7,10 +7,6 @@
   background-clip: padding-box, border-box;
 }
 
-.featureIcon {
-
-}
-
 .feature.large {
   grid-column: span 2;
 }

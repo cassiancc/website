@@ -3,6 +3,9 @@ import {Feature, Features} from "./features";
 import cn from "clsx";
 import styles from './style.module.css';
 import Package from "./icons/Package";
+import Layers from "./icons/Layers";
+import Puzzle from "./icons/Puzzle";
+import GitHubBadge from "./badges/GitHubBadge";
 
 export function LandingPageGlobalStyles() {
   return (
@@ -66,9 +69,9 @@ export function HomePage() {
       <LandingPageGlobalStyles/>
       <div className="w-full flex flex-col min-h-screen py-20 bg-black">
         <div className="flex flex-col justify-center items-center gap-y-8">
-          <img src="/logo.png" width="128" height="128"/>
+          <img src="/logo.png" width="128" height="128" className="z-50"/>
 
-          <h1 className="text-7xl font-bold text-gray-300">
+          <h1 className="text-7xl font-bold text-neutral-300">
             Sinytra
           </h1>
 
@@ -81,22 +84,24 @@ export function HomePage() {
             </h2>
           </div>
 
+          <GitHubBadge />
+
           <div className="features-container">
             <div className="content-container">
               <Features>
-                <Feature index={1} className="card-with-border" href="/docs/" title="Run your favourite mods" icon={Package}>
+                <Feature index={1} className="card-with-border" href="/docs/" title="Play your favourite mods" icon={Package}>
                   With Connector and ForgifiedFabricAPI, you can run your favourite Fabric mods on NeoForge
                 </Feature>
 
                 <Feature index={2} className="card-with-border"
                          href="https://github.com/Sinytra/MultiLoader-Template"
-                         title="Write once, run everywhere" icon={Package}>
+                         title="Write once, run anywhere" icon={Layers}>
                   ForgifiedFabricAPI allows you to write a Fabric mod that can run on NeoForge without needing a complex MultiLoader setup and without (too much) platform specific code
                 </Feature>
 
                 <Feature index={3} className="card-with-border"
                          href="https://modrinth.com/mod/connector-extras"
-                         title="Improved compatibility" icon={Package}>
+                         title="Improved compatibility" icon={Puzzle}>
                   ConnectorExtras implements APIs of different mods in such a way that they're compatible with Forge mods
                 </Feature>
               </Features>
