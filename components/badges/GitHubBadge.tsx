@@ -16,8 +16,8 @@ export default function GitHubBadge() {
             <GitHubMark/>
           </div>
           <span className="text-2xl mx-auto">
-                      GitHub
-                </span>
+            GitHub
+          </span>
         </button>
       </a>
     </div>

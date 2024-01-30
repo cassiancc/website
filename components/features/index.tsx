@@ -1,7 +1,7 @@
 import cn from 'clsx'
 import {motion} from 'framer-motion'
 import Link from 'next/link'
-import type {Component, ReactNode} from 'react'
+import React, {Component, ReactNode} from 'react'
 import styles from './style.module.css'
 
 export interface Props {
@@ -23,7 +23,7 @@ export function Feature({title, children, icon: FeatureIcon, large, centered, li
       whileInView={{opacity: 1}}
       viewport={{once: true, margin: '-20px'}}
       transition={{duration: Math.min(0.25 + index * 0.2, 0.8)}}
-      className={"rounded-2xl px-4 py-5 border-x border-t " + cn(
+      className={"rounded-2xl px-4 py-5 outline-x outline-t " + cn(
         styles.feature,
         large && styles.large,
         centered && styles.centered,
@@ -33,15 +33,20 @@ export function Feature({title, children, icon: FeatureIcon, large, centered, li
       {...props}
     >
 
-      <div className={"w-20 h-20 rounded-2xl absolute border-x border-t border-neutral-500 bg-black -top-14 left-1/2 -translate-x-1/2"}>
-        <div className="flex justify-center items-center w-full h-full text-neutral-300">
-          <FeatureIcon />
+      <div className={"p-1.5 rounded-full absolute border border-neutral-800 bg-gradient-to-br from-neutral-500 to-black to-50% -top-[4.5rem] left-1/2 -translate-x-1/2"}>
+        <div className="w-[5.5rem] h-[5.5rem]">
+          <div className="flex justify-center items-center w-full h-full text-neutral-300 relative">
+            <div className="absolute w-full h-full rounded-full bg-gradient-to-tl from-[rgba(0,0,0,0.3)] from-5% to-60%">
+
+            </div>
+            <FeatureIcon />
+          </div>
         </div>
       </div>
 
       <div className="mt-5 flex flex-col gap-y-5">
         <h2 className="text-3xl">{title}</h2>
-        <div className="py-3">
+        <div className="py-3 mb-4">
           <span className="text-neutral-400">{children}</span>
         </div>
       </div>
