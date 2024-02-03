@@ -83,6 +83,14 @@ export function HomePage() {
           background-color: #000;
           border-bottom: 1px solid rgb(38, 38, 38);
         }
+
+        img {
+          object-fit: cover;
+          object-position: left;
+          z-index: 0;
+          user-select: none;
+          pointer-events: none;
+        }
       `}</style>
       <Background/>
       <LandingPageGlobalStyles/>
