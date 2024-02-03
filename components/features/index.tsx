@@ -73,3 +73,7 @@ export function Feature({title, children, icon: FeatureIcon, large, centered, li
 export function Features({children}: { children: ReactNode }) {
   return <div className={styles.features}>{children}</div>
 }
+
+export function Features2({children}: { children: ReactNode }) {
+  return <div className={[styles.features, styles.w2].join(" ")}>{children}</div>
+}

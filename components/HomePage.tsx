@@ -1,5 +1,5 @@
 import Head from "next/head";
-import {Feature, Features} from "./features";
+import {Feature, Features, Features2} from "./features";
 import cn from "clsx";
 import styles from './style.module.css';
 import Package from "./icons/Package";
@@ -42,6 +42,18 @@ function Background() {
 function ConnectorLogo() {
   return <>
     <img src="/connector.png" alt="icon"/>
+  </>
+}
+
+function MatyrobbrtLogo() {
+  return <>
+    <img src="https://github.com/Matyrobbrt.png" alt="icon" className="rounded-image" />
+  </>
+}
+
+function Su5edLogo() {
+  return <>
+    <img src="https://github.com/Su5ed.png" alt="icon" className="rounded-image" />
   </>
 }
 
@@ -135,6 +147,24 @@ export function HomePage() {
                   ConnectorExtras implements APIs of different mods in such a way that they're compatible with Forge mods
                 </Feature>
               </Features>
+            </div>
+          </div>
+
+          <h2 className="text-6xl text-neutral-300">
+            The team
+          </h2>
+
+          <div className="features-container">
+            <div className="content-container">
+              <Features2>
+                <Feature index={1} className="card-with-border" href="https://github.com/Su5ed" title="Su5ed" icon={Su5edLogo}>
+                  Founder & Lead Developer
+                </Feature>
+
+                <Feature index={3} className="card-with-border" href="https://github.com/Matyrobbrt" title="Matyrobbrt" icon={MatyrobbrtLogo}>
+                  Core Developer
+                </Feature>
+              </Features2>
             </div>
           </div>
         </div>

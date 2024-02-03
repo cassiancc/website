@@ -30,3 +30,7 @@ p, span {
     width: 100%;
     clear: both;
 }
+
+.rounded-image {
+  border-radius: 50%;
+}

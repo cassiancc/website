@@ -103,6 +103,10 @@
   font-feature-settings: initial;
 }
 
+.w2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .feature :global(.show-on-mobile) {
   display: none;
 }
