@@ -4,54 +4,54 @@
   initial-value: 5%;
 }
 
-@property --x {
+@property --posX {
   syntax: '<percentage>';
   inherits: false;
   initial-value: 0%;
 }
 
-@property --y {
+@property --posY {
   syntax: '<percentage>';
-  inherits: true;
+  inherits: false;
   initial-value: 0%;
 }
 
 @keyframes animatedBackground {
   from {
-    --x: 0%;
-    --y: 0%;
+    --posX: 0%;
+    --posY: 0%;
     --visibility: 5%;
   }
   to {
-    --x: 50%;
-    --y: 50%;
+    --posX: 50%;
+    --posY: 50%;
     --visibility: 100%;
   }
 }
 
 @keyframes animatedBackgroundOut {
   from {
-    --x: 50%;
-    --y: 50%;
+    --posX: 50%;
+    --posY: 50%;
     --visibility: 100%;
   }
   to {
-    --x: 0%;
-    --y: 0%;
+    --posX: 0%;
+    --posY: 0%;
     --visibility: 5%;
   }
 }
 
 .badgeOuter {
   border: double 2px transparent;
-  background-image: linear-gradient(black, black), radial-gradient(ellipse at var(--x) var(--y), #737373 var(--visibility), transparent);
+  background-image: linear-gradient(black, black), radial-gradient(ellipse at var(--posX) var(--posY), #737373 var(--visibility), transparent);
   background-origin: border-box;
   background-clip: padding-box, border-box;
 }
 
 .discodBadgeOuter {
   border: double 2px transparent;
-  background-image: linear-gradient(black, black), radial-gradient(ellipse at var(--x) var(--y), #5865F2F0 var(--visibility), transparent);
+  background-image: linear-gradient(black, black), radial-gradient(ellipse at var(--posX) var(--posY), #5865F2F0 var(--visibility), transparent);
   background-origin: border-box;
   background-clip: padding-box, border-box;
 }
