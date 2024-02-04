@@ -14,7 +14,7 @@ Below you will find instructions on accessing the console logs in different laun
   browser overhead and provide highlighting that can make reading the logs worse. We can help you more easily debug issues with the raw log.
 </Callout>
 
-<Tabs items={['Modrinth']}>
+<Tabs items={['Modrinth', 'Vanilla Launcher']}>
   <Tabs.Tab>
     <Steps>
       ### Step 1
@@ -35,6 +35,26 @@ Below you will find instructions on accessing the console logs in different laun
 
       ### Step 5
       Paste the logs into a [Gist](https://gist.github.com).
+    </Steps>
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+    <Steps>
+      ### Step 1
+      Go to the Settings tab.
+      ![Settings](/docimg\vanilla\settingstab.png)
+
+      ### Step 2
+      Tick the `Open output log when Minecraft: Java Edition starts` option, under the `Minecraft: Java Edition Settings` category.
+      ![Open output log](/docimg\vanilla\openoutputlog.png)
+
+      ### Step 3
+      Start the game and make sure that all logging levels are enabled.
+      ![All levels](/docimg\vanilla\alllogging.png)
+
+      ### Step 4
+      Select all the logging lines with CTRL+A and copy them.
+      ![Copy logs](/docimg\vanilla\copylogs.png)
     </Steps>
   </Tabs.Tab>
 </Tabs>
