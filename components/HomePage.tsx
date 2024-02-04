@@ -48,13 +48,13 @@ function ConnectorLogo() {
 
 function MatyrobbrtLogo() {
   return <>
-    <img src="https://github.com/Matyrobbrt.png" alt="icon" className="rounded-image" />
+    <img src="https://github.com/Matyrobbrt.png" alt="icon" className="rounded-image"/>
   </>
 }
 
 function Su5edLogo() {
   return <>
-    <img src="https://github.com/Su5ed.png" alt="icon" className="rounded-image" />
+    <img src="https://github.com/Su5ed.png" alt="icon" className="rounded-image"/>
   </>
 }
 
@@ -132,19 +132,20 @@ export function HomePage() {
           <div className="features-container">
             <div className="content-container">
               <Features>
-                <Feature index={1} className="card-with-border" href="/docs/" title="Play your favourite mods" icon={ConnectorLogo}>
+                <Feature index={1} className="card-with-border" href="https://www.curseforge.com/minecraft/mc-mods/sinytra-connector"
+                         title="Play your favourite mods" icon={ConnectorLogo}>
                   With Connector and ForgifiedFabricAPI, you can run your favourite Fabric mods on NeoForge
                 </Feature>
 
                 <Feature index={2} className="card-with-border"
-                         href="https://github.com/Sinytra/MultiLoader-Template"
+                         href="https://www.curseforge.com/minecraft/mc-mods/forgified-fabric-api"
                          title="Write once, run anywhere" icon={FFAPILogo}>
                   ForgifiedFabricAPI allows you to write a Fabric mod that can run on NeoForge without needing a complex MultiLoader setup and without
                   (too much) platform specific code
                 </Feature>
 
                 <Feature index={3} className="card-with-border"
-                         href="https://modrinth.com/mod/connector-extras"
+                         href="https://www.curseforge.com/minecraft/mc-mods/connector-extras"
                          title="Improved compatibility" icon={ConnectorExtrasLogo}>
                   ConnectorExtras implements APIs of different mods in such a way that they're compatible with Forge mods
                 </Feature>
