@@ -1,0 +1,40 @@
+import {Callout} from "nextra/components";
+import { Steps } from "nextra/components";
+import { Tabs } from "nextra/components";
+
+# Sharing launcher logs
+Sometimes your game may crash, but it will not have any indication of doing so in the `latest.log` nor the `debug.log` file.
+To be able to debug the issue and see which mod is causing it, you need to check the launcher logs to have access to the entire console logging.
+
+Below you will find instructions on accessing the console logs in different launchers.
+
+<Callout type="info" emoji="ℹ️">
+  We recommend sharing logs through [Gist](https://gist.github.com/).
+  While there are specialised websites for Minecraft for sharing logs (such as [mclo.gs](https://mclo.gs/)) they have needless
+  browser overhead and provide highlighting that can make reading the logs worse. We can help you more easily debug issues with the raw log.
+</Callout>
+
+<Tabs items={['Modrinth']}>
+  <Tabs.Tab>
+    <Steps>
+      ### Step 1
+      Select the logs tab of the profile you have launched.
+      ![Select the logs tab](/docimg\modrinth\logstab.png)
+
+      ### Step 2
+      Choose the `Live Log` from the log type drop-down.
+      ![Choose live log](/docimg\modrinth\livelog.png)
+
+      ### Step 3
+      Make sure that all logging levels are enabled.
+      ![All logging levels](/docimg\modrinth\alllogging.png)
+
+      ### Step 4
+      Copy the logs to clipboard.
+      ![Copy](/docimg\modrinth\copylogs.png)
+
+      ### Step 5
+      Paste the logs into a [Gist](https://gist.github.com).
+    </Steps>
+  </Tabs.Tab>
+</Tabs>
