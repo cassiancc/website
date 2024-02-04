@@ -52,9 +52,9 @@ function MatyrobbrtLogo() {
   </>
 }
 
-function Su5edLogo() {
+function Su5eDLogo() {
   return <>
-    <img src="https://github.com/Su5ed.png" alt="icon" className="rounded-image"/>
+    <img src="https://github.com/Su5eD.png" alt="icon" className="rounded-image"/>
   </>
 }
 
@@ -160,7 +160,7 @@ export function HomePage() {
           <div className="features-container">
             <div className="content-container">
               <Features2>
-                <Feature index={1} className="card-with-border" href="https://github.com/Su5ed" title="Su5ed" icon={Su5edLogo}>
+                <Feature index={1} className="card-with-border" href="https://github.com/Su5eD" title="Su5eD" icon={Su5eDLogo}>
                   Founder & Lead Developer
                 </Feature>
 
