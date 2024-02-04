@@ -8,7 +8,7 @@ const config: DocsThemeConfig = {
     link: 'https://github.com/Sinytra/Connector',
   },
   chat: {
-    link: 'https://discord.gg/mamk7z3TKZ',
+    link: 'https://discord.sinytra.org',
   },
   docsRepositoryBase: 'https://github.com/Sinytra/website',
   footer: {
@@ -19,6 +19,11 @@ const config: DocsThemeConfig = {
         </p>
       </div>
     )
+  },
+  darkMode: false,
+  nextThemes: {
+    defaultTheme: 'dark',
+    forcedTheme: 'dark'
   },
   head: () => {
     const { title } = useConfig();

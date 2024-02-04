@@ -7,6 +7,7 @@ import Layers from "./icons/Layers";
 import Puzzle from "./icons/Puzzle";
 import GitHubBadge from "./badges/GitHubBadge";
 import React from "react";
+import DiscordBadge from "./badges/DiscordBadge";
 
 export function LandingPageGlobalStyles() {
   return (
@@ -108,7 +109,7 @@ export function HomePage() {
       <LandingPageGlobalStyles/>
       <div className="w-full flex flex-col min-h-screen py-14 bg-black">
         <div className="flex flex-col justify-center items-center gap-y-8">
-          <img src="/logo.png" width="128" height="128" className="z-50"/>
+          <img src="/logo.png" width="128" height="128" className="z-10"/>
 
           <h1 className="text-7xl font-bold text-neutral-300">
             Sinytra
@@ -123,8 +124,9 @@ export function HomePage() {
             </h2>
           </div>
 
-          <div className="mb-2">
+          <div className="mb-2 flex flex-row gap-x-4">
             <GitHubBadge/>
+            <DiscordBadge/>
           </div>
 
           <div className="features-container">
