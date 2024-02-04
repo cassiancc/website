@@ -7,19 +7,19 @@
 @property --posX {
   syntax: '<percentage>';
   inherits: false;
-  initial-value: 0%;
+  initial-value: 0.001%;
 }
 
 @property --posY {
   syntax: '<percentage>';
   inherits: false;
-  initial-value: 0%;
+  initial-value: 0.001%;
 }
 
 @keyframes animatedBackground {
   from {
-    --posX: 0%;
-    --posY: 0%;
+    --posX: 0.001%;
+    --posY: 0.001%;
     --visibility: 5%;
   }
   to {
@@ -36,8 +36,8 @@
     --visibility: 100%;
   }
   to {
-    --posX: 0%;
-    --posY: 0%;
+    --posX: 0.001%;
+    --posY: 0.001%;
     --visibility: 5%;
   }
 }
