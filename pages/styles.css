@@ -9,10 +9,6 @@ h2 {
   font-family: 'Poppins', sans-serif;
 }
 
-p, span {
-  font-family: 'Inter', sans-serif;
-}
-
 .header img {
     display: inline;
     float: left;

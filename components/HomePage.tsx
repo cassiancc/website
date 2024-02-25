@@ -74,6 +74,10 @@ export function HomePage() {
   return (
     <>
       <style jsx>{`
+        *:global(span), *:global(p) {
+          font-family: 'Inter', sans-serif;
+        }
+
         .content-container {
           max-width: 90rem;
           padding-left: max(env(safe-area-inset-left), 1.5rem);

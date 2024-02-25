@@ -1,4 +1,10 @@
 export default {
   index: 'Introduction',
-  launcherlog: 'Sharing launcher logs'
+  connector: 'Connector',
+  launcherlog: {
+    title: 'Sharing launcher logs',
+    theme: {
+      toc: false
+    }
+  }
 }
