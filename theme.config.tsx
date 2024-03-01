@@ -1,6 +1,7 @@
-import React from 'react'
-import {DocsThemeConfig, useConfig} from 'nextra-theme-docs'
+import React from 'react';
+import {DocsThemeConfig, useConfig} from 'nextra-theme-docs';
 import {HeaderLogo} from "./components/HeaderLogo";
+import getURL from "./components/util/getURL";
 
 const config: DocsThemeConfig = {
   logo: <HeaderLogo/>,
@@ -30,7 +31,12 @@ const config: DocsThemeConfig = {
 
     return <>
       <title>{title}</title>
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+      <meta property="og:title" content="Sinytra"/>
+      <meta property="og:description" content="Bridging the gap between platforms. Powered by Free and Open Source Software."/>
+      <meta property="og:image" content={getURL('/logo.png')}/>
+      <meta property="og:type" content="website" />
+      <meta name="theme-color" content="#ffcf06" />
     </>
   }
 }

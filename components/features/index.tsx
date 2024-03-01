@@ -44,7 +44,7 @@ export function Feature({title, children, icon: FeatureIcon, large, centered, li
         </div>
       </div>
 
-      <div className="mt-5 flex flex-col gap-y-5">
+      <div className="mt-5 flex flex-col gap-y-5 pb-5 sm:pb-0">
         <h2 className="text-3xl">{title}</h2>
         <div className="py-3 mb-4">
           <span className="text-neutral-400">{children}</span>

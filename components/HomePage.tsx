@@ -112,8 +112,8 @@ export function HomePage() {
       <Background/>
       <LandingPageGlobalStyles/>
       <div className="w-full flex flex-col min-h-screen py-14 bg-black">
-        <div className="flex flex-col justify-center items-center gap-y-8">
-          <img src="/logo.png" width="128" height="128" className="z-10"/>
+        <div className="flex flex-col justify-center items-center gap-y-8 z-50">
+          <img src="/logo.png" width="128" height="128" className="z-50"/>
 
           <h1 className="text-7xl font-bold text-neutral-300">
             Sinytra
