@@ -1,3 +1,4 @@
 export default {
-  configuration: 'Configuration'
+  configuration: 'Configuration',
+  faq: 'Frequently Asked Questions'
 }
