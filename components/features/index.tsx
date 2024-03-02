@@ -52,7 +52,7 @@ export function Feature({title, children, icon: FeatureIcon, large, centered, li
       </div>
 
       {href ? (
-        <Link className={styles.link} href={href} target="_blank">
+        <Link className={styles.link} href={href}>
           <svg width="1.5em"
                xmlns="http://www.w3.org/2000/svg"
                viewBox="0 0 20 20"

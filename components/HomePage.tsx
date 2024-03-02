@@ -136,7 +136,7 @@ export function HomePage() {
           <div className="features-container">
             <div className="content-container">
               <Features>
-                <Feature index={1} className="card-with-border" href="https://www.curseforge.com/minecraft/mc-mods/sinytra-connector"
+                <Feature index={1} className="card-with-border" href="/docs/connector"
                          title="Play your favourite mods" icon={ConnectorLogo}>
                   With Connector and ForgifiedFabricAPI, you can run your favourite Fabric mods on NeoForge
                 </Feature>

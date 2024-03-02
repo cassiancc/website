@@ -1,4 +1,7 @@
 import React from 'react';
+import CurseForgeCompactMinimal from "./icons/devin/CurseForgeCompactMinimal";
+import ModrinthCompactMinimal from "./icons/devin/ModrinthCompactMinimal";
+import GitHubCompactMinimal from "./icons/devin/GitHubCompactMinimal";
 
 export interface Props {
   title: string
@@ -14,13 +17,13 @@ export default function LogoHeader({title, curseforge, modrinth, github, icon: I
       <h1 className="text-4xl font-bold">{title}</h1>
       <div className="ml-auto flex flex-row items-center gap-2">
         { curseforge && <a href={curseforge} target="_blank">
-          <img src="https://github.com/intergrav/devins-badges/blob/v3/assets/compact-minimal/available/curseforge_46h.png?raw=true" alt="CurseForge"/>
+          <CurseForgeCompactMinimal />
         </a>}
         {modrinth && <a href={modrinth} target="_blank">
-          <img src="https://github.com/intergrav/devins-badges/blob/v3/assets/compact-minimal/available/modrinth_46h.png?raw=true" alt="Modrinth"/>
+          <ModrinthCompactMinimal />
         </a>}
         {github && <a href={github} target="_blank">
-          <img src="https://github.com/intergrav/devins-badges/blob/v3/assets/compact-minimal/available/github_46h.png?raw=true" alt="GitHub"/>
+          <GitHubCompactMinimal />
         </a>}
         <div className="ml-2">
           <Icon/>
