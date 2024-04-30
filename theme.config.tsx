@@ -3,7 +3,7 @@ import {DocsThemeConfig, useConfig} from 'nextra-theme-docs';
 import {HeaderLogo} from "./components/HeaderLogo";
 
 const config: DocsThemeConfig = {
-  logo: <HeaderLogo/>,
+  logo: <HeaderLogo />,
   project: {
     link: 'https://github.com/Sinytra/Connector',
   },

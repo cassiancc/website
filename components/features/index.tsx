@@ -1,7 +1,7 @@
 import cn from 'clsx'
 import {motion} from 'framer-motion'
 import Link from 'next/link'
-import React, {Component, ReactNode} from 'react'
+import React, {ReactNode} from 'react'
 import styles from './style.module.css'
 
 export interface Props {
@@ -14,9 +14,10 @@ export interface Props {
   index: number
   children: any
   icon: any
+  pad?: boolean
 }
 
-export function Feature({title, children, icon: FeatureIcon, large, centered, lightOnly, className, href, index, ...props}: Props) {
+export function Feature({title, children, icon: FeatureIcon, large, centered, lightOnly, className, href, index, pad, ...props}: Props) {
   return (
     <motion.div
       initial={{opacity: 0}}
@@ -44,7 +45,7 @@ export function Feature({title, children, icon: FeatureIcon, large, centered, li
         </div>
       </div>
 
-      <div className="mt-5 flex flex-col gap-y-5 pb-5 sm:pb-0">
+      <div className={"mt-5 flex flex-col gap-y-5 pb-5 " + (!pad ? "sm:pb-0" : "")}>
         <h2 className="text-3xl">{title}</h2>
         <div className="py-3 mb-4">
           <span className="text-neutral-400">{children}</span>

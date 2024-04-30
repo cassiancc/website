@@ -2,12 +2,13 @@ import Head from "next/head";
 import {Feature, Features, Features2} from "./features";
 import cn from "clsx";
 import styles from './style.module.css';
-import Package from "./icons/Package";
-import Layers from "./icons/Layers";
-import Puzzle from "./icons/Puzzle";
-import GitHubBadge from "./badges/GitHubBadge";
 import React from "react";
 import DiscordBadge from "./badges/DiscordBadge";
+import GetStartedBadge from "./badges/GetStartedBadge";
+import DescLine from "./DescLine";
+import Package from "./icons/Package";
+import WrenchScrewdriver from "./icons/WrenchScrewdriver";
+import Heart from "./icons/Heart";
 
 export function LandingPageGlobalStyles() {
   return (
@@ -78,6 +79,10 @@ export function HomePage() {
           font-family: 'Inter', sans-serif;
         }
 
+        :global(.nextra-nav-container) {
+          z-index: 99;
+        }
+
         .content-container {
           max-width: 90rem;
           padding-left: max(env(safe-area-inset-left), 1.5rem);
@@ -89,6 +94,9 @@ export function HomePage() {
           margin: 9rem 0 0;
           padding: 4rem 0;
           background-color: #f3f4f6;
+        }
+
+        .features-border {
           border-bottom: 1px solid #e5e7eb;
         }
 
@@ -98,7 +106,19 @@ export function HomePage() {
 
         :global(.dark) .features-container {
           background-color: #000;
+        }
+
+        :global(.dark) .features-border {
           border-bottom: 1px solid rgb(38, 38, 38);
+        }
+
+        .feature-reverse {
+          border-top: 1px solid #e5e7eb;
+          border-radius: 1rem;
+        }
+
+        :global(.dark) .feature-reverse {
+          border-top: 1px solid rgb(38, 38, 38);
         }
 
         img {
@@ -107,6 +127,12 @@ export function HomePage() {
           z-index: 0;
           user-select: none;
           pointer-events: none;
+        }
+
+        .funny-gradient {
+          background: linear-gradient(180deg, rgba(255, 0, 0, 0.94) 0%, #000 50%, #000 100%);
+          width: calc(100% + 4px);
+          height: 1rem;
         }
       `}</style>
       <Background/>
@@ -129,7 +155,7 @@ export function HomePage() {
           </div>
 
           <div className="mb-2 flex flex-row gap-x-4">
-            <GitHubBadge/>
+            <GetStartedBadge/>
             <DiscordBadge/>
           </div>
 
@@ -157,23 +183,60 @@ export function HomePage() {
             </div>
           </div>
 
+          <div className="feature-reverse relative flex flex-col justify-center items-center gap-y-8 pt-10">
+            <div className="absolute -top-0.5 left-0 -translate-y-1/2 -z-50">
+              <div aria-hidden="true"
+                   className="h-[300px] w-[320px] sm:left-auto user-select-none center pointer-events-none max-w-full"
+                   style={{background: "conic-gradient(from 90deg at 50% 50%, #00000000 50%, #000000 50%),radial-gradient(rgba(200,200,200,0.1) 0%, transparent 80%)"}}></div>
+            </div>
+
+            <h2 className="text-6xl text-neutral-300">
+              About us
+            </h2>
+
+            <div className="features-container !mt-20 w-2/3">
+              <div className="content-container flex flex-col gap-y-8">
+                <DescLine icon={Package}>
+                  Sinytra provides <b className="text-neutral-400">high-quality cross-platform tools</b> for both developers and users in Minecraft
+                  modding.
+                </DescLine>
+                <DescLine icon={Heart} right>
+                  We aim to enhance users' experience by bringing mod loaders closer together, allowing them to <b className="text-neutral-400">enjoy
+                  playing all the mods</b> they love.
+                </DescLine>
+                <DescLine icon={WrenchScrewdriver}>
+                  Using our libraries, developers can <b className="text-neutral-400">spend less time porting</b> and focus on improving their works
+                  instead
+                </DescLine>
+              </div>
+            </div>
+          </div>
+
           <h2 className="text-6xl text-neutral-300">
             The team
           </h2>
 
-          <div className="features-container">
+          <div className="features-container features-border">
             <div className="content-container">
               <Features2>
-                <Feature index={1} className="card-with-border" href="https://github.com/Su5eD" title="Su5eD" icon={Su5eDLogo}>
+                <Feature index={1} className="card-with-border" href="https://github.com/Su5eD" title="Su5eD" icon={Su5eDLogo} pad>
                   Founder & Lead Developer
                 </Feature>
 
-                <Feature index={3} className="card-with-border" href="https://github.com/Matyrobbrt" title="Matyrobbrt" icon={MatyrobbrtLogo}>
+                <Feature index={3} className="card-with-border" href="https://github.com/Matyrobbrt" title="Matyrobbrt" icon={MatyrobbrtLogo} pad>
                   Core Developer
                 </Feature>
               </Features2>
             </div>
           </div>
+
+          <h2 className="text-6xl text-neutral-300 mt-5">
+            Ready?
+          </h2>
+
+          <span className="text-2xl text-neutral-500 text-center my-8">The world of unified minecraft modding awaits.</span>
+
+          <GetStartedBadge/>
         </div>
       </div>
     </>

@@ -3,6 +3,7 @@ import Gear from "../../components/icons/Gear";
 import {Callout, Cards} from 'nextra/components';
 import LogoHeader from "../../components/LogoHeader";
 import ConnectorLogo from "../../components/icons/ConnectorLogo";
+import WrenchScrewdriver from "../../components/icons/WrenchScrewdriver";
 
 <LogoHeader
   title="Connector"
@@ -26,10 +27,15 @@ import ConnectorLogo from "../../components/icons/ConnectorLogo";
     href="/docs/connector/configuration"
   />
   <Cards.Card
-      icon={<Stars/>}
-      title={<span className="text-sm">Frequently Asked Questions</span>}
-      href="/docs/connector/faq"
-    />
+    icon={<WrenchScrewdriver/>}
+    title="Developers"
+    href="/docs/connector/developers"
+  />
+  <Cards.Card
+    icon={<Stars/>}
+    title={<span className="text-sm">Frequently Asked Questions</span>}
+    href="/docs/connector/faq"
+  />
 </Cards>
 
 ## 📖 About
