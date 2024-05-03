@@ -1,24 +1,19 @@
 import React from 'react';
 import {DocsThemeConfig, useConfig} from 'nextra-theme-docs';
 import {HeaderLogo} from "./components/HeaderLogo";
+import PageFooter from "./components/PageFooter";
 
 const config: DocsThemeConfig = {
   logo: <HeaderLogo />,
   project: {
-    link: 'https://github.com/Sinytra/Connector',
+    link: 'https://github.com/Sinytra/',
   },
   chat: {
     link: 'https://discord.sinytra.org',
   },
   docsRepositoryBase: 'https://github.com/Sinytra/website',
   footer: {
-    content: (
-      <div className="flex w-full flex-col items-center sm:items-start">
-        <p className="mt-6 text-xs">
-          © {new Date().getFullYear()} The Sinytra Project.
-        </p>
-      </div>
-    )
+    content: PageFooter
   },
   darkMode: false,
   nextThemes: {
@@ -31,7 +26,7 @@ const config: DocsThemeConfig = {
     return <>
       <title>{title}</title>
       <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
-      <meta property="og:title" content="Sinytra"/>
+      <meta property="og:title" content={title ? title + ' – Sinytra' : 'Sinytra'}/>
       <meta property="og:description" content="Bridging the gap between platforms. Powered by Free and Open Source Software."/>
       <meta property="og:image" content="https://sinytra.org/logo.png"/>
       <meta property="og:type" content="website" />
