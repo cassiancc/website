@@ -4,7 +4,7 @@ import Link from "next/link";
 
 function Copyright() {
   return <>
-    <div className="flex flex-col items-center sm:items-start basis-96">
+    <div className="flex flex-col items-center sm:items-start sm:basis-96">
       <div>
         <HeaderLogo/>
       </div>
@@ -40,7 +40,7 @@ function LinkColumn({title, className, children}: { title: string, className?: s
 export default function PageFooter() {
   return <>
     <footer className="bg-neutral-900 text-gray-400 w-full">
-      <div className="flex flex-row w-full justify-between">
+      <div className="flex flex-wrap-reverse sm:flex-nowrap sm:flex-row w-full justify-center gap-y-8 sm:justify-between">
         <Copyright/>
 
         <div className="grid w-full ml-auto grid-cols-2 gap-8 sm:w-2/3 lg:grid-cols-4">

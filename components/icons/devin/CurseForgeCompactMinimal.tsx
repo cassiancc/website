@@ -3,7 +3,7 @@ import React from 'react';
 export default function CurseForgeCompactMinimal() {
   return <>
     <svg width="46" height="46" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <g clip-path="url(#clip0_2_1409)">
+      <g clipPath="url(#clip0_2_1409)">
         <rect x="0.0107422" y="-6.10352e-05" width="40" height="40" rx="8" fill="url(#paint0_linear_2_1409)"/>
         <g filter="url(#filter0_d_2_1409)">
           <path
@@ -11,11 +11,11 @@ export default function CurseForgeCompactMinimal() {
             fill="#F16436"/>
         </g>
       </g>
-      <rect x="1.06074" y="1.04994" width="37.9" height="37.9" rx="6.95" stroke="white" stroke-opacity="0.15" stroke-width="2.1"/>
+      <rect x="1.06074" y="1.04994" width="37.9" height="37.9" rx="6.95" stroke="white" strokeOpacity="0.15" strokeWidth="2.1"/>
       <defs>
         <filter id="filter0_d_2_1409" x="0.296457" y="0.285654" width="39.4286" height="39.4286" filterUnits="userSpaceOnUse"
-                color-interpolation-filters="sRGB">
-          <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                colorInterpolationFilters="sRGB">
+          <feFlood floodOpacity="0" result="BackgroundImageFix"/>
           <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
           <feOffset/>
           <feGaussianBlur stdDeviation="2.85714"/>
@@ -25,8 +25,8 @@ export default function CurseForgeCompactMinimal() {
           <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2_1409" result="shape"/>
         </filter>
         <linearGradient id="paint0_linear_2_1409" x1="20.0107" y1="-6.10352e-05" x2="20.0107" y2="39.9999" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#2E140B"/>
-          <stop offset="1" stop-color="#1E0C07"/>
+          <stop stopColor="#2E140B"/>
+          <stop offset="1" stopColor="#1E0C07"/>
         </linearGradient>
         <clipPath id="clip0_2_1409">
           <rect x="0.0107422" y="-6.10352e-05" width="40" height="40" rx="8" fill="white"/>

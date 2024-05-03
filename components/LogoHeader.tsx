@@ -13,7 +13,7 @@ export interface Props {
 
 export default function LogoHeader({title, curseforge, modrinth, github, icon: Icon}: Props) {
   return <>
-    <div className="flex flex-row w-full items-center">
+    <div className="flex flex-row flex-wrap w-full items-center">
       <h1 className="text-4xl font-bold">{title}</h1>
       <div className="ml-auto flex flex-row items-center gap-2">
         { curseforge && <a href={curseforge} target="_blank">
@@ -25,7 +25,7 @@ export default function LogoHeader({title, curseforge, modrinth, github, icon: I
         {github && <a href={github} target="_blank">
           <GitHubCompactMinimal />
         </a>}
-        <div className="ml-2">
+        <div className="ml-2 hidden sm:block">
           <Icon/>
         </div>
       </div>

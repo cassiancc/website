@@ -1,24 +1,73 @@
-import {Callout} from "nextra/components";
+---
+title: Introduction
+---
 
-# Sinytra
-Sinytra provides different libraries that allow running Fabric mods on NeoForge.
+import {Callout} from "nextra/components";
+import LogoHeader from "../../components/LogoHeader";
+import SinytraLogo from "../../components/icons/SinytraLogo";
+
+<LogoHeader
+  title="Sinytra"
+  icon={SinytraLogo}
+/>
 
 <Callout type="warning" emoji="🚧">
   The documentation is under construction and may not be complete.
 </Callout>
 
-## Get started
-To get started, you should download [Connector](https://modrinth.com/mod/connector) and [Forgified Fabric API](https://modrinth.com/mod/forgified-fabric-api) and
-place them in the `mods` folder.
+## 👋 Introduction
+
+Sinytra creates high-quality tools related to cross-platform Minecraft modding.
+We aim to enhance users' experience by bringing mod loaders closer together, allowing them to enjoy playing all the mods they love.
+By utilizing our libraries, developers can now spend less time porting their mods and focus more on development itself.
+
+Whether you're a player or a developer, we've got you covered! Take a look at an overview of our projects below.
+
+## 🎮 For users
+
+### Connector - run Fabric mods on Forge! [#connector]
+
+Connector is a translation/compatibility layer that allows running [Fabric](https://fabricmc.net/) mods on [MinecraftForge](https://minecraftforge.net/).
+Its goal is to bring the two platforms closer together, saving developers time and effort maintaining their mods for multiple platforms at once,
+as well as allowing players to play all their favourite mods in one modpack.
+
+[Get started](/docs/connector) using Connector.
+
+### Connector Extras - improved compatiblity [#connector-extras]
+
+An accompanying mod for Connector that adds integration with third-party APIs and mods.
+It is divided into several submodules for each type of integration.
+
+Example compatibility modules include:
+
+- Team Reborn Energy API Bridge
+- JEI / REI / EMI Plugin Platform Bridge
+- Reach Entity Attributes - Forge port
+- Forge Config API Port - Forge bridge
+- KubeJS Bridge
+
+More information about Connector Extras is available [here](https://github.com/Sinytra/ConnectorExtras).
+
+## 🛠️ For developers
+
+### Forgified Fabric API
+
+The Forgified Fabric API (FFAPI) is a **direct port** of Fabric API to Minecraft Forge, regularly kept up to date with the upstream repository.
+
+It is designed to make cross-platform mod development easier by allowing developers to use Fabric API as a common library to interact with the
+game's code on both platforms.
+However, it is not an abstraction layer, and loader-specific code still needs to be handled separately for each platform.
+
+Interested in developing mods using FFAPI? Head over to the [documentation](/docs/forgified-fabric-api).
+
+### Mixin Transmogrifier
+
+> Mixin Booster - 🦀 Sp🧽nge Mixin Ultimate ⚡ Exterminator ☠️ MK2 ++ (strong effect) 🦀
 
 <Callout type="info">
-  Do not download Fabric API as it's not needed when you have Forgified Fabric API.
+  Starting 1.20.4, NeoForge comes with the Fabric fork of Mixin by default, making the use of Mixin Transmogrifier no longer necessary.
 </Callout>
 
-Then, simply install your Fabric mods in the `mods` folder, and profit!
+This project replaces Sponge's (classic) Mixin which is used by (Neo)Forge with Fabric's version that has more features (e.g. interface and constructor injections).
 
-<Callout type="error" emoji="🐛">
-  If you notice any bugs or you encounter incompatibilities **DO NOT** report them to the mod authors.
-  Instead, join our [Discord server](https://discord.gg/mamk7z3TKZ) for support or report the issue on our [issue
-  tracker](https://github.com/Sinytra/Connector/issues).
-</Callout>
+You can find more details in our blog post on [The state of Mixins on (Neo)Forge](https://github.com/Sinytra/Connector/discussions/383).

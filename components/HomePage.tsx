@@ -75,12 +75,16 @@ export function HomePage() {
   return (
     <>
       <style jsx>{`
-        *:global(span), *:global(p) {
+        *:global(span), *:global(p), *:global(li) {
           font-family: 'Inter', sans-serif;
         }
 
         :global(.nextra-nav-container) {
           z-index: 99;
+        }
+
+        :global(.nextra-sidebar-container) {
+          z-index: 90;
         }
 
         .content-container {
@@ -154,7 +158,7 @@ export function HomePage() {
             </h2>
           </div>
 
-          <div className="mb-2 flex flex-row gap-x-4">
+          <div className="mb-2 flex flex-row flex-wrap justify-center gap-4">
             <GetStartedBadge/>
             <DiscordBadge/>
           </div>
@@ -194,17 +198,17 @@ export function HomePage() {
               About us
             </h2>
 
-            <div className="features-container !mt-20 w-2/3">
+            <div className="features-container !mt-20 sm:w-2/3">
               <div className="content-container flex flex-col gap-y-8">
-                <DescLine icon={Package}>
+                <DescLine icon={Package} index={1}>
                   Sinytra provides <b className="text-neutral-400">high-quality cross-platform tools</b> for both developers and users in Minecraft
                   modding.
                 </DescLine>
-                <DescLine icon={Heart} right>
+                <DescLine icon={Heart} right index={3}>
                   We aim to enhance users' experience by bringing mod loaders closer together, allowing them to <b className="text-neutral-400">enjoy
                   playing all the mods</b> they love.
                 </DescLine>
-                <DescLine icon={WrenchScrewdriver}>
+                <DescLine icon={WrenchScrewdriver} index={5}>
                   Using our libraries, developers can <b className="text-neutral-400">spend less time porting</b> and focus on improving their works
                   instead
                 </DescLine>
