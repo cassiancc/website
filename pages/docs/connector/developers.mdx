@@ -4,7 +4,7 @@
 
 You can use the APIs provided by Fabric's `FabricLoader` and FML's `ModList` to detect Connector's presence in your mods.
 
-- Connector's FML modid is `connectormod`.
+- Connector's FML modid is `connector`.
 
 - The Forgified Fabric API uses `fabric_api` as its main mod id.
   All of its modules follow upstream mod id's where dashes (`-`) are replaced by underscores (`_`) to comply with FML's requirements.<br/>
@@ -31,7 +31,7 @@ To overcome this issue, Connector offers a placeholder mod feature that allows d
 dependencies without causing issues with duplicate mod IDs. To enable this feature, include a standard FML metadata file in your Forge release mod
 file with the following lines:
 
-```toml copy filename="mods.toml"
+```toml copy filename="neoforge.mods.toml"
 [properties]
 "connector:placeholder"=true
 ```
@@ -40,9 +40,9 @@ This will let Connector know the mod's FML metadata only acts as a placeholder, 
 Fabric mod instead. You can now safely declare a dependency on Connector without having to worry about it being ignored. FML will promptly alert
 the user in case Connector is missing.
 
-```toml copy filename="mods.toml"
+```toml copy filename="neoforge.mods.toml"
 [[dependencies.examplemod]]
-modId="connectormod"
+modId="connector"
 mandatory=true
 versionRange="*"
 ordering="NONE"
@@ -52,7 +52,7 @@ side="BOTH"
 <details>
   <summary>Show full example</summary>
 
-  ```toml {5-6,29-34} filename="mods.toml"
+  ```toml {5-6,29-34} filename="neoforge.mods.toml"
   modLoader="javafml"
   loaderVersion="[47,)"
   license="CC0-1.0"
@@ -82,7 +82,7 @@ side="BOTH"
   side="BOTH"
 
   [[dependencies.examplemod]]
-  modId="connectormod"
+  modId="connector"
   mandatory=true
   versionRange="*"
   ordering="NONE"
