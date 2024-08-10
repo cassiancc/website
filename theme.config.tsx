@@ -11,7 +11,7 @@ const config: DocsThemeConfig = {
   chat: {
     link: 'https://discord.sinytra.org',
   },
-  docsRepositoryBase: 'https://github.com/Sinytra/website',
+  docsRepositoryBase: 'https://github.com/Sinytra/website/blob/master/',
   footer: {
     content: PageFooter
   },
